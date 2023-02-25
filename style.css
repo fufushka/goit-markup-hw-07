@@ -208,7 +208,7 @@ span.footer-logo-span {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(./images/hero/people-office\ 1.jpg);
+    url(./images/main/hero/people-office\ 1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -238,8 +238,9 @@ span.footer-logo-span {
 .hero-button:focus {
   background-color: var(--color-ocean);
 }
+/* -------Feautures section------------- */
 .feautures-icon-wrapper {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 24px;
@@ -247,38 +248,67 @@ span.footer-logo-span {
   margin-bottom: 8px;
 
   background-color: var(--color-cloud);
-  border-radius: 4px;
+  border-radius: 4px; */
+  display: none;
 }
 .feautures-icon {
-  width: 60px;
-  height: 64px;
+  /* width: 60px;
+  height: 64px; */
 }
-.feautures-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+
+@media screen and (min-width: 768px) {
+  .feautures-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .feautures-item {
+    --items: 2;
+    flex-basis: calc(
+      (100% - var(--indent) * (var(--items) - 1)) / var(--items)
+    );
+  }
 }
 .feautures-item:not(:last-child) {
-  margin-right: 24px;
+  /* margin-right: 24px; */
 }
-.feautures-item {
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-}
+
 .feautures-item-title {
-  margin-bottom: 8px;
+  /* 
   font-size: 20px;
   line-height: calc(24 / 20);
+  */
+  margin-bottom: 8px;
+  line-height: calc(40 / 36);
+
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0.02em;
+
   color: var(--primary-color);
 }
 
 .feautures-item-paragraph {
-  font-weight: 400;
+  /* font-weight: 400;
   font-size: 16px;
   line-height: calc(24 / 16);
   color: var(--secondary-color);
-  letter-spacing: 0.02em;
-}
+  letter-spacing: 0.02em; */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 
+  color: var(--secondary-color);
+}
+@media screen and (max-width: 767px) {
+  .feautures-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}
 .works-title {
   margin-bottom: 72px;
 
