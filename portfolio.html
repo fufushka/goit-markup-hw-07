@@ -27,16 +27,21 @@
   <body>
     <header class="header">
       <div class="header-container container">
+        <a href="./index.html" class="studio-logo header-logo link"
+          >Web<span>Studio</span></a
+        >
         <nav class="header-nav">
-          <a href="./index.html" class="studio-logo link"
-            >Web<span>Studio</span></a
-          >
           <ul class="header-list">
             <li class="header-item">
-              <a href="./index.html" class="header-link link"> Studio</a>
+              <a href="./index.html " class="header-link nav-link link">
+                Studio</a
+              >
             </li>
             <li class="header-item">
-              <a href="portfolio.html" class="header-link link current">
+              <a
+                href="portfolio.html"
+                class="header-link current nav-link link"
+              >
                 Portfolio</a
               >
             </li>
@@ -46,19 +51,130 @@
           </ul>
         </nav>
         <address class="header-address">
-          <ul class="header-list">
+          <ul class="header-address-list">
             <li class="header-item">
-              <a href="mailto:info@devstudio.com" class="address-link link"
+              <a
+                href="mailto:info@devstudio.com"
+                class="address-link nav-link link"
                 >info@devstudio.com</a
               >
             </li>
             <li class="header-item">
-              <a href="tel:+110001111111" class="address-link link"
+              <a href="tel:+110001111111" class="address-link nav-link link"
                 >+11 (000)111-11-11</a
               >
             </li>
           </ul>
         </address>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-button-icon" width="32" height="22">
+            <use
+              href="./images/symbol-defs.svg#menu-icon"
+              class="menu-icon"
+            ></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <button type="button" class="menu__close-btn btn-close js-close-menu">
+          <svg class="close-btn-svg" width="8" height="8">
+            <use href="./images/symbol-defs.svg#close-icon"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-list">
+            <li class="menu-list-item">
+              <a href="./index.html " class="mobile-nav-link nav-link current">
+                Studio</a
+              >
+            </li>
+            <li class="menu-list-item">
+              <a href="portfolio.html" class="mobile-nav-link nav-link link">
+                Portfolio</a
+              >
+            </li>
+            <li class="menu-list-item">
+              <a href="#" class="mobile-nav-link nav-link link"> Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="mobile-menu-address">
+          <ul class="mobile-address-list">
+            <li class="address-item">
+              <a
+                href="tel:+110001111111"
+                class="mobile-address-link phone-link nav-link link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-address-item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-address-link mail-link nav-link link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="menu-socials-list">
+          <li class="menu-socials-item">
+            <a
+              href="https://www.instagram.com/"
+              class="menu-socials-link"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="instagram link"
+            >
+              <svg class="menu-icon">
+                <use href="./images/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-socials-item">
+            <a
+              href="https://twitter.com/home"
+              class="menu-socials-link"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="twitter link"
+            >
+              <svg class="menu-icon">
+                <use href="./images/symbol-defs.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-socials-item">
+            <a
+              href="https://www.facebook.com/"
+              class="menu-socials-link"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="facebook link"
+            >
+              <svg class="menu-icon">
+                <use href="./images/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-socials-item">
+            <a
+              href="https://www.linkedin.com/"
+              class="menu-socials-link"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="linkedin link"
+            >
+              <svg class="menu-icon">
+                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main class="main">
@@ -87,9 +203,19 @@
               <a href="#" class="examples-list-link">
                 <div class="thumb">
                   <img
-                    src="images/portfolio/banking-app.jpg"
+                    srcset="
+                      ./images/portfolio/img_356w-8.jpg  356w,
+                      ./images/portfolio/img_360px-7.jpg 360w,
+                      ./images/portfolio/img_396w.jpg    396w,
+                      ./images/portfolio/img_712w-8.jpg  712w,
+                      ./images/portfolio/img_720px-7.jpg 720w,
+                      ./images/portfolio/img_792w.jpg    792w
+                    "
+                    sizes="(min-width:1200px) 360px,(min-width:768px) 356px,(min-width:428px) 396px, 100vw"
+                    src="./images/portfolio/img_356w-8.jpg"
                     alt="banking-app interface Concept"
-                    width="360px"
+                    min-width="356px"
+                    loading="lazy"
                   />
                   <div class="overlay">
                     <p class="thumb-text">
@@ -112,9 +238,18 @@
               <a href="#" class="examples-list-link">
                 <div class="thumb">
                   <img
-                    src="images/portfolio/cashless.jpg"
+                    srcset="
+                      ./images/portfolio/img_356w-7.jpg  356w,
+                      ./images/portfolio/img_360px-8.jpg 360w,
+                      ./images/portfolio/img2_396w.jpg   396w,
+                      ./images/portfolio/img_712w-7.jpg  712w,
+                      ./images/portfolio/img_720w-8.jpg  720w,
+                      ./images/portfolio/img2_792w.jpg   792w
+                    "
+                    sizes="(min-width:1200px) 360px,(min-width:768px) 356px,(min-width:428px) 396px, 100vw"
+                    src="./images/portfolio/img_360px-8.jpg"
                     alt="man pays with phone"
-                    width="360px"
+                    min-width="356px"
                   />
                   <div class="overlay">
                     <p class="thumb-text">
@@ -134,9 +269,18 @@
               <a href="#" class="examples-list-link">
                 <div class="thumb">
                   <img
-                    src="images/portfolio/meditation.jpg"
+                    srcset="
+                      ./images/portfolio/img_356w-6.jpg  356w,
+                      ./images/portfolio/img_360px-6.jpg 360w,
+                      ./images/portfolio/img3_396w.jpg   396w,
+                      ./images/portfolio/img_712w-6.jpg  712w,
+                      ./images/portfolio/img_720w-6.jpg  720w,
+                      ./images/portfolio/img3_792w.jpg   792w
+                    "
+                    sizes="(min-width:1200px) 360px,(min-width:768px) 356px,(min-width:428px) 396px, 100vw"
+                    src="./images/portfolio/img_360px-8.jpg"
                     alt="laptop and phone staying near each other"
-                    width="360px"
+                    min-width="356px"
                   />
                   <div class="overlay">
                     <p class="thumb-text">
@@ -156,9 +300,18 @@
               <a href="#" class="examples-list-link">
                 <div class="thumb">
                   <img
-                    src="images/portfolio/taxi.jpg"
+                    srcset="
+                      ./images/portfolio/img_356w-5.jpg  356w,
+                      ./images/portfolio/img_360px-5.jpg 360w,
+                      ./images/portfolio/img4_396w.jpg   396w,
+                      ./images/portfolio/img_712w-5.jpg  712w,
+                      ./images/portfolio/img_720w-5.jpg  720w,
+                      ./images/portfolio/img4_792w.jpg   792w
+                    "
+                    sizes="(min-width:1200px) 360px,(min-width:768px) 356px,(min-width:428px) 396px, 100vw"
+                    src="./images/portfolio/img_360px-5.jpg"
                     alt="taxi driver holding steering wheel"
-                    width="360px"
+                    min-width="356px"
                   />
                   <div class="overlay">
                     <p class="thumb-text">
@@ -178,9 +331,18 @@
               <a href="#" class="examples-list-link">
                 <div class="thumb">
                   <img
-                    src="images/portfolio/phone.jpg"
+                    srcset="
+                      ./images/portfolio/img_356w-6.jpg  356w,
+                      ./images/portfolio/img_360px-2.jpg 360w,
+                      ./images/portfolio/img5_396w.jpg   396w,
+                      ./images/portfolio/img_712w-6.jpg  712w,
+                      ./images/portfolio/img_720w-2.jpg  720w,
+                      ./images/portfolio/img5_792w.jpg   792w
+                    "
+                    sizes="(min-width:1200px) 360px,(min-width:768px) 356px,(min-width:428px) 396px, 100vw"
+                    src="./images/portfolio/img_360px-6.jpg"
                     alt="phone with beutiful background"
-                    width="360px"
+                    min-width="356px"
                   />
                   <div class="overlay">
                     <p class="thumb-text">
@@ -200,9 +362,18 @@
               <a href="#" class="examples-list-link">
                 <div class="thumb">
                   <img
-                    src="images/portfolio/woman.jpg"
+                    srcset="
+                      ./images/portfolio/img_356w-5.jpg  356w,
+                      ./images/portfolio/img_360px-3.jpg 360w,
+                      ./images/portfolio/img6_396w.jpg   396w,
+                      ./images/portfolio/img_712w-5.jpg  712w,
+                      ./images/portfolio/img_720w-3.jpg  720w,
+                      ./images/portfolio/img6_792w.jpg   792w
+                    "
+                    sizes="(min-width:1200px) 360px,(min-width:768px) 356px,(min-width:428px) 396px, 100vw"
+                    src="./images/portfolio/img_360px-5.jpg"
                     alt="smiling girl holding phone "
-                    width="360px"
+                    min-width="356px"
                   />
                   <div class="overlay">
                     <p class="thumb-text">
@@ -222,9 +393,18 @@
               <a href="#" class="examples-list-link">
                 <div class="thumb">
                   <img
-                    src="images/portfolio/stories.jpg"
+                    srcset="
+                      ./images/portfolio/img_356w-4.jpg  356w,
+                      ./images/portfolio/img_360px-7.jpg 360w,
+                      ./images/portfolio/img7_396w.jpg   396w,
+                      ./images/portfolio/img_712w-4.jpg  712w,
+                      ./images/portfolio/img_720w-7.jpg  720w,
+                      ./images/portfolio/img7_792w.jpg   792w
+                    "
+                    sizes="(min-width:1200px) 360px,(min-width:768px) 356px,(min-width:428px) 396px, 100vw"
+                    src="./images/portfolio/img_360px-4.jpg"
                     alt="Instagram Stories Concept"
-                    width="360px"
+                    min-width="356px"
                   />
                   <div class="overlay">
                     <p class="thumb-text">
@@ -244,9 +424,18 @@
               <a href="#" class="examples-list-link">
                 <div class="thumb">
                   <img
-                    src="images/portfolio/food.jpg"
+                    srcset="
+                      ./images/portfolio/img_356w-3.jpg  356w,
+                      ./images/portfolio/img_360px-1.jpg 360w,
+                      ./images/portfolio/img8_396w.jpg   396w,
+                      ./images/portfolio/img_712w-3.jpg  712w,
+                      ./images/portfolio/img_720w-1.jpg  720w,
+                      ./images/portfolio/img8_792w.jpg   792w
+                    "
+                    sizes="(min-width:1200px) 360px,(min-width:768px) 356px,(min-width:428px) 396px, 100vw"
+                    src="./images/portfolio/img_360px-3.jpg"
                     alt="woman holding package of food"
-                    width="360px"
+                    min-width="356px"
                   />
                   <div class="overlay">
                     <p class="thumb-text">
@@ -266,9 +455,18 @@
               <a href="#" class="examples-list-link">
                 <div class="thumb">
                   <img
+                    srcset="
+                      ./images/portfolio/img_356w-2.jpg  356w,
+                      ./images/portfolio/img_360px.jpg 360w,
+                      ./images/portfolio/img9_396w.jpg   396w,
+                      ./images/portfolio/img_712w-2.jpg  712w,
+                      ./images/portfolio/img_720w.jpg  720w,y
+                      ./images/portfolio/img9_792w.jpg   792w
+                    "
+                    sizes="(min-width:1200px) 360px,(min-width:768px) 356px,(min-width:428px) 396px, 100vw"
                     src="images/portfolio/cofee.jpg"
                     alt="barista making cofee"
-                    width="360px"
+                    min-width="356px"
                   />
                   <div class="overlay">
                     <p class="thumb-text">
@@ -364,21 +562,21 @@
           <form class="subscription-form">
             <label
               for="subscription_user_email"
-              class="subscription-form__label label-block"
+              class="subscription-form__label"
               >Subscribe
             </label>
             <div class="subscription-form__flex-container">
               <input
                 type="email"
-                class="subscripition-form__input"
+                class="subscription-form__input"
                 id="subscription_user_email"
                 name="subscription_user_email"
                 placeholder="E-mail"
               />
-              <button type="submit" class="subscripition-form__button btn">
+              <button type="submit" class="subscription-form__button btn">
                 Subscribe
                 <svg
-                  class="subscripition-form__button_icon"
+                  class="subscription-form__button_icon"
                   width="24"
                   height="24"
                 >
@@ -392,5 +590,13 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
