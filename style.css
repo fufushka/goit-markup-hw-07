@@ -963,10 +963,22 @@ span.footer-logo-span {
   line-height: calc(24 / 16);
   letter-spacing: 0.04em;
 }
-/* ------portfolio.html------- */
+/* ------portfolio------- */
 .main-page {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+@media screen and (min-width: 768px) {
+  .main-page {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-page {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
 }
 .filters-list {
   margin-bottom: 48px;
